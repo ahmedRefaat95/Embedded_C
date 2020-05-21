@@ -12,7 +12,7 @@
 #define STK_PRIVATE_H
 
 /* SysTick interrupt service routine */
-static void SysTick_Handler(void);
+void SysTick_Handler(void);
 
 
 #endif
