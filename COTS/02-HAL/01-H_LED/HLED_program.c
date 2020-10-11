@@ -46,11 +46,15 @@ STD_ERROR HLED_init(void)
 }
 
 /************************************************************************
- * Function name: HLED_init
+ * Function name: HLED_control
  *
- * Parameters:  Inputs : 1- LedChannel ( LED number in configuration array)
-                         2- Status
-                             ranges : ON ,OFF
+ * Parameters:  Inputs : 1- LedChannel
+ *							type: u8
+ *                      	Description: LED number in configuration array
+ *                       2- Status
+ *                       	type: u8
+ *                      	Description: status of the desired LED channel (ON ,OFF)
+ *
  *              Output: NA
  *              In/out: NA
  * Return: OK, NOT_OK

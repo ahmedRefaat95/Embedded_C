@@ -16,4 +16,9 @@
 #define LEDS_NO		3
 
 
+#define LED_GREEN	0
+#define LED_YELLOW	1
+#define LED_RED		2
+
+
 #endif

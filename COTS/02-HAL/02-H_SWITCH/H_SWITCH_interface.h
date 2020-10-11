@@ -52,7 +52,7 @@ void HSwitch_GetSwitchState(u8 SwitchChannel,u8* State);
 *				N/A
 *
 *	Description: This API monitors the state of the switch and handles
-*					the de-bouncing
+*				 the de-bouncing
 ************************************************************************/
 void HSwitch_Runnable(void);
 

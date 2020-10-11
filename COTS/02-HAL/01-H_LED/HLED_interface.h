@@ -1,5 +1,5 @@
 /************************************************************************
- * File name: HLED_interface.h
+ * File name: HLED_interface.c
  *
  * Description: This file contains prototypes for the LED HAL APIs
  *
@@ -8,53 +8,38 @@
  * Version 1.0
  *************************************************************************/
 
-#ifndef H_SWITCH_INTERFACE_H
-#define H_SWITCH_INTERFACE_H
+#ifndef HLED_INTERFACE_H
+#define HLED_INTERFACE_H
 
-#define SWITCH1	0
-#define SWITCH2	1
-
-
-/************************************************************************
- * Function name: HSwitch_Init
- *
- * Parameters:  Input: NA
- *              Output : STD_ERROR
- *
- * Description: This API shall initializes all the configured switches
- *****************************************************************************/
-STD_ERROR HSwitch_Init(void);
-
+#define ON		1
+#define OFF		0
 
 /************************************************************************
- * Function name: HSwitch_GetSwitchState
+ * Function name: HLED_init
  *
- * Parameters:  Input:
- *                	SwitchChannel
- *                     type: u8
- *                       Description:	LED number in configuration array
- * 				I/O:
- * 					State
- *                     type: pointer to u8
- *                       Description:	container for the LED state
- *                       				ranges : ON ,OFF
- * Return: STD_ERROR (OK, NOT_OK)
- * Description: This API shall get status of the required switch
- ************************************************************************/
-void HSwitch_GetSwitchState(u8 SwitchChannel,u8* State);
-
+ * Parameters:  Inputs :NA
+ *              Output: NA
+ *              In/out: NA
+ * Return: OK, NOT_OK
+ * Description: a function to initializes all the configured LEDs
+ ***************************************************************************/
+STD_ERROR HLED_init(void);
 
 /************************************************************************
-*   Function name: HSwitch_Runnable
-*	Inputs	:
-*				N/A
-*	Outputs :
-*				N/A
-*
-*	Description: This API monitors the state of the switch and handles
-*					the de-bouncing
-************************************************************************/
-void HSwitch_Runnable(void);
-
+ * Function name: HLED_control
+ *
+ * Parameters:  Inputs : 1- LedChannel
+ *							type: u8
+ *                      	Description: LED number in configuration array
+ *                       2- Status
+ *                       	type: u8
+ *                      	Description: status of the desired LED channel (ON ,OFF)
+ *
+ *              Output: NA
+ *              In/out: NA
+ * Return: OK, NOT_OK
+ * Description: a function to  control the desired LED channel
+ ***************************************************************************/
+STD_ERROR HLED_control(u8 Local_u8LedChannel , u8 Local_u8Status);
 
 #endif

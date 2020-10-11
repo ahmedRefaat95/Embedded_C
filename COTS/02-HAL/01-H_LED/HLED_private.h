@@ -16,9 +16,6 @@
 #define ACTIVE_HIGH		1
 #define ACTIVE_LOW		2
 
-#define ON		1
-#define OFF		2
-
 /************************* Type definitions *****************************/
 typedef struct
 {
